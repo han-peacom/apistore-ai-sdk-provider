@@ -57,6 +57,13 @@
     "access": "public"
   },
   "homepage": "https://apistore.cloud/docs",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/han-peacom/apistore-ai-sdk-provider.git"
+  },
+  "bugs": {
+    "url": "https://github.com/han-peacom/apistore-ai-sdk-provider/issues"
+  },
   "keywords": [
     "ai",
     "ai-sdk",
