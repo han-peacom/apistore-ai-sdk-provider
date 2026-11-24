@@ -1,5 +1,5 @@
 {
-  "name": "@apistore/ai-sdk-provider",
+  "name": "@apistorecloud/ai-sdk-provider",
   "version": "0.1.0",
   "description": "API Store provider for the Vercel AI SDK: Claude, GPT, Gemini and DeepSeek chat models under one API key",
   "license": "MIT",

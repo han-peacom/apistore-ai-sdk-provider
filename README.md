@@ -7,7 +7,7 @@ It supports text generation, streaming, tool calling, structured output (JSON sc
 ## Setup
 
 ```bash
-npm install @apistore/ai-sdk-provider ai
+npm install @apistorecloud/ai-sdk-provider ai
 ```
 
 Get an API key from [API Store](https://apistore.cloud) and set it as an environment variable:
@@ -21,13 +21,13 @@ APISTORE_API_KEY=your-api-key
 Import the default provider instance `apistore`. It reads the key from `APISTORE_API_KEY`:
 
 ```ts
-import { apistore } from '@apistore/ai-sdk-provider';
+import { apistore } from '@apistorecloud/ai-sdk-provider';
 ```
 
 For a custom setup, use `createApiStore`:
 
 ```ts
-import { createApiStore } from '@apistore/ai-sdk-provider';
+import { createApiStore } from '@apistorecloud/ai-sdk-provider';
 
 const apistore = createApiStore({
   apiKey: process.env.APISTORE_API_KEY,
@@ -65,7 +65,7 @@ The full list is at `GET https://api.apistore.cloud/v1/models` and in the [API S
 ### Generate text
 
 ```ts
-import { apistore } from '@apistore/ai-sdk-provider';
+import { apistore } from '@apistorecloud/ai-sdk-provider';
 import { generateText } from 'ai';
 
 const { text } = await generateText({
@@ -79,7 +79,7 @@ console.log(text);
 ### Stream text
 
 ```ts
-import { apistore } from '@apistore/ai-sdk-provider';
+import { apistore } from '@apistorecloud/ai-sdk-provider';
 import { streamText } from 'ai';
 
 const result = streamText({
@@ -97,7 +97,7 @@ console.log('\nUsage:', await result.usage);
 ### Tools
 
 ```ts
-import { apistore } from '@apistore/ai-sdk-provider';
+import { apistore } from '@apistorecloud/ai-sdk-provider';
 import { generateText, stepCountIs, tool } from 'ai';
 import { z } from 'zod';
 
@@ -118,7 +118,7 @@ const { text } = await generateText({
 ### Structured output
 
 ```ts
-import { apistore } from '@apistore/ai-sdk-provider';
+import { apistore } from '@apistorecloud/ai-sdk-provider';
 import { generateText, Output } from 'ai';
 import { z } from 'zod';
 
@@ -137,7 +137,7 @@ const { output } = await generateText({
 ### Image and PDF input
 
 ```ts
-import { apistore } from '@apistore/ai-sdk-provider';
+import { apistore } from '@apistorecloud/ai-sdk-provider';
 import { generateText } from 'ai';
 import { readFile } from 'node:fs/promises';
 
@@ -168,7 +168,7 @@ Image and PDF input works with the Claude, GPT and Gemini models. PDFs are sent 
 Set the reasoning effort with the AI SDK `reasoning` option (or the `reasoningEffort` provider option). Models that return their reasoning, such as Claude, expose it as `reasoningText`:
 
 ```ts
-import { apistore } from '@apistore/ai-sdk-provider';
+import { apistore } from '@apistorecloud/ai-sdk-provider';
 import { generateText } from 'ai';
 
 const { text, reasoningText } = await generateText({
